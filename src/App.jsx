@@ -8,20 +8,23 @@ import Login from './pages/Login';
 import Calorie from './pages/Calorie';
 import MyWorkouts from './pages/MyWorkouts';
 import WorkoutDetails from './pages/WorkoutDetails';
+import Settings from './pages/Settings';
 
 function App() {
   
   return (
     <div>
-      <Navbar/>
       <Router>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/workouts' element={<Workouts/>}/>
-          <Route path='/favorite' element={<Favorite/>}/>
-          <Route path='/calorie' element={<Calorie/>}/>
-          <Route path='/myworkouts' element={<MyWorkouts/>}/>
-          <Route path='/workout/:id' element={<WorkoutDetails/>}/>
+          <Route path='/' element={<Navbar/>}>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/workouts' element={<Workouts/>}/>
+            <Route path='/favorite' element={<Favorite/>}/>
+            <Route path='/calorie' element={<Calorie/>}/>
+            <Route path='/myworkouts' element={<MyWorkouts/>}/>
+            <Route path='/workout/:id' element={<WorkoutDetails/>}/>
+            <Route path='/settings' element={<Settings/>}/>
+          </Route>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
         </Routes>

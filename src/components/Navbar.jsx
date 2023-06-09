@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {RiAccountCircleLine} from 'react-icons/ri'
+import { Outlet } from 'react-router-dom'
 
 
 function classNames(...classes) {
@@ -14,6 +15,7 @@ export default function Navbar() {
 
     if(bool === false){
   return (
+    <div>
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
         <>
@@ -139,9 +141,12 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
+    <Outlet/>
+    </div>
   )}
   else{
     return (
+      <div>
       <Disclosure as="nav" className="bg-white shadow">
         {({ open }) => (
           <>
@@ -222,7 +227,7 @@ export default function Navbar() {
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href="/login"
+                              href="/settings"
                               className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                             >
                               Settings
@@ -331,6 +336,8 @@ export default function Navbar() {
           </>
         )}
       </Disclosure>
+      <Outlet/>
+      </div>
     )
   }
   
