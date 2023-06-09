@@ -3,7 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import AddWorkout from '../forms/AddWorkout'
 
-export default function Slideover({open,setOpen}) {
+export default function Slideover({open,setOpen,form}) {
 
 
   return (
@@ -50,7 +50,7 @@ export default function Slideover({open,setOpen}) {
                       </div>
                     </div>
                     <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                        <AddWorkout open={open} setOpen={setOpen}/>
+                        {form}
                         <div className="mt-6 flex items-center justify-center gap-x-6">
                         <button type="button" className="text-sm font-semibold leading-6 text-gray-900" onClick={()=>{setOpen(false)}}>
                          Cancel
