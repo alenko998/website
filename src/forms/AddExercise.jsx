@@ -54,14 +54,7 @@ export default function AddExercise() {
               </div>
               <p className="mt-3 text-sm leading-6 text-gray-600">Write a short description of a exercise.</p>
             </div>
-
-        
-       
-
-      
-
-     
-
+            
             <div className="col-span-full">
               <label htmlFor="workoutPhoto" className="block text-sm font-medium leading-6 text-gray-900">
                 Exercise video

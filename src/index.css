@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary-blue: #00d8ff;
+    --primary-purple: #6a00ff;
+  }
